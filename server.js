@@ -5,8 +5,10 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./routes/users');
 const authRoutes = require('./routes/auth');
 const authMiddleware = require('./middleware/auth'); // Import auth middleware
+const cors = require('cors');
 require('dotenv').config();
 
+app.use(cors());
 const app = express();
 const PORT = process.env.PORT || 5000;
 
